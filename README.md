@@ -1,11 +1,11 @@
 # Memopus
 
-## Checklist:
+## Features:
 
 1. **User Authentication:**  
    Users can log in with their username and password to access the app's features, ensuring secure management of their cards.
 
-2. **Card Management (CRUD):**  
+2. **Card Management:**  
    Users can create, view, edit, and delete cards. Each card consists of a question and an answer, providing a flexible way to store information.
 
 3. **Tag-based Organization:**  
