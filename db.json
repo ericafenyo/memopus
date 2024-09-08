@@ -1,10 +1,11 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "6f944e72-7dd9-4b8a-a3ce-4959497b6f3c",
       "username": "username",
       "password": "password"
     }
   ],
-  "sessions": []
+  "sessions": [],
+  "cards": []
 }

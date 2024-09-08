@@ -8,17 +8,12 @@ export interface Session {
   id: string;
 
   /**
-   * The unique identifier of the authenticated user.
+   * The unique identifier of the user.
    */
-  userId: number;
+  subject: string;
 
   /**
-   * The username of the authenticated user.
+   * The date the session was created.
    */
-  username: string;
-
-  /**
-   * The session token used for authentication.
-   */
-  token: string;
+  created: Date;
 }

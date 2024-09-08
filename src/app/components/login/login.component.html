@@ -1,1 +1,36 @@
-<p>login works!</p>
+<div class="container">
+  <div class="w-[480px] m-auto">
+    <form class="space-y-6" (submit)="onSubmit($event)">
+      <div class="form-field">
+        <label for="username">Username</label>
+        <input
+          class="text-input"
+          id="username"
+          name="username"
+          placeholder="Enter your username"
+          [formControl]="username"
+        />
+        @if (username.invalid && username.dirty) {
+          <label class="text-red-500">This is an Error</label>
+        }
+      </div>
+
+      <div class="form-field">
+        <label for="password">Password</label>
+        <input
+          class="text-input"
+          id="password"
+          name="username"
+          placeholder="Enter your password"
+          value="password"
+          [formControl]="password"
+        />
+        <label>This is an Error</label>
+      </div>
+
+      <div class="form-field">
+        <button class="btn btn-primary">Login</button>
+      </div>
+    </form>
+  </div>
+</div>
