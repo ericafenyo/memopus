@@ -1,0 +1,26 @@
+<div class="border bg-white rounded m-2 py-2 px-3">
+    <div class="flex items-center mb-3">
+        <button class="w-9 h-9 hover:bg-indigo-50 inline-flex items-center justify-center rounded-3xl border">
+            <lucide-icon name="chevron-left"/>
+        </button>
+        <span class="flex-1 text-center">Move to column</span>
+        <button class="w-9 h-9 hover:bg-indigo-50 inline-flex items-center justify-center rounded-3xl border">
+            <lucide-icon name="chevron-right"/>
+        </button>
+    </div>
+    <p class="leading-normal text-neutral-700 hover:cursor-pointer" (click)="flip()">{{ card.question }}</p>
+
+    @if (flipped) {
+
+        <div>
+            <span class="divide-x"></span>
+            <span class="text-neutral-500">Answer:</span>
+            <p class="leading-normal text-neutral-700">{{ card.answer }}</p>
+            <p class="leading-normal text-neutral-700">{{ card.description }}</p>
+        </div>
+    }
+
+    <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none mt-3 disabled:opacity-50 bg-slate-600 text-white shadow hover:bg-slate-600/90 h-9 px-4 py-2 w-full">
+        Suggest an answer
+    </button>
+</div>

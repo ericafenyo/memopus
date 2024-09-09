@@ -1,0 +1,12 @@
+<div class="flex-1 bg-indigo-500 bg-opacity-5 border rounded-md min-w-64 w-64 flex-shrink-0">
+    <div class="flex justify-between">
+        <span>{{ column.label }}</span>
+        <lucide-icon name="circle-plus" size="24"></lucide-icon>
+    </div>
+
+    <div class="relative scroll-p-0.5">
+        @for (card of cards; track card.id) {
+            <app-flashcard [card]="card"></app-flashcard>
+        }
+    </div>
+</div>

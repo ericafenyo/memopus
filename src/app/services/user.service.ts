@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
-import {User} from "@/interfaces/user";
 import {HttpClient} from "@angular/common/http";
 import {environment} from "@src/environments/environment"
 import {Observable} from "rxjs";
+import {Flashcard} from "@app/interfaces/flashcard";
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,7 @@ export class UserService {
    *
    * @param id The id of the user to get.
    */
-  getUser(id: string): Observable<User> {
-    return this.http.get<User>(`${environment.apiUrl}/users/${id}`)
+  getUser(id: string): Observable<Flashcard> {
+    return this.http.get<Flashcard>(`${environment.apiUrl}/users/${id}`)
   }
 }

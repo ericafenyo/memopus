@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {FormControl, ReactiveFormsModule, Validators} from "@angular/forms";
-import {LoginService} from "@/services/login.service";
+import {LoginService} from "@app/services/login.service";
 import {Router} from "@angular/router";
 
 @Component({

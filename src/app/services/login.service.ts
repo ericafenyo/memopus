@@ -1,11 +1,11 @@
 import {Injectable} from '@angular/core';
-import {User} from "@/interfaces/user";
-import {Session} from "@/interfaces/session";
+import {User} from "@app/interfaces/user";
+import {Session} from "@app/interfaces/session";
 import {filter, map, switchMap} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {v4 as uuidv4} from 'uuid';
 import {environment} from "@src/environments/environment"
-import {AuthService} from "@/services/auth.service";
+import {AuthService} from "@app/services/auth.service";
 
 export type LoginOptions = Omit<User, "id">
 

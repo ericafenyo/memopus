@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {z} from 'zod';
-import {Session} from "@/interfaces/session";
-import {UserService} from "@/services/user.service";
+import {Session} from "@app/interfaces/session";
+import {UserService} from "@app/services/user.service";
 import {map, take} from "rxjs";
 import {isEmpty} from "lodash";
 
