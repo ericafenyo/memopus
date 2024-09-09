@@ -1,12 +1,16 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {LucideAngularModule, CirclePlus, icons} from "lucide-angular";
 
 @Component({
   selector: 'app-board',
   standalone: true,
-  imports: [],
+  imports: [LucideAngularModule],
+
   templateUrl: './board.component.html',
   styleUrl: './board.component.css'
 })
 export class BoardComponent {
+  constructor() {
 
+  }
 }

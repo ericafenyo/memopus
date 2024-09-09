@@ -4,6 +4,10 @@
 @tailwind utilities;
 
 @layer base {
+  html, body {
+    @apply h-full;
+  }
+
   .text-input {
     @apply bg-white border rounded-sm;
   }

@@ -6,6 +6,12 @@
       "password": "password"
     }
   ],
-  "sessions": [],
+  "sessions": [
+    {
+      "id": "33fe4682-e96c-4df2-a73c-646b126150d5",
+      "subject": "6f944e72-7dd9-4b8a-a3ce-4959497b6f3c",
+      "created": "2024-09-08T23:44:42.925Z"
+    }
+  ],
   "cards": []
 }
