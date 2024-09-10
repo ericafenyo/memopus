@@ -4,6 +4,7 @@ import {Flashcard} from "@app/interfaces/flashcard";
 import {CardService} from "@app/services/card.service";
 import {ColumnComponent} from "@app/components/column/column.component";
 import {Column} from "@app/interfaces/column";
+import {Store} from "@app/services/store.service";
 
 @Component({
   selector: 'app-board',
@@ -17,11 +18,17 @@ export class BoardComponent implements OnInit {
   columns!: Column[];
   cards!: Flashcard[];
 
-  constructor(private service: CardService) {}
+  constructor(
+    private cardStore: Store,
+    private service: CardService
+  ) {}
 
   ngOnInit() {
-    this.service.getCards().subscribe(cards => {this.cards = cards});
-    this.service.getColumn().subscribe(columns => {this.columns = columns});
+    // this.service.getCards().subscribe(cards => {this.cards = cards});
+
+    this.cardStore.cards.subscribe(cards => {this.cards = cards});
+
+    this.service.getColumns().subscribe(columns => {this.columns = columns});
   }
 
   findCardsBy(column: Column) {

@@ -18,8 +18,8 @@
       "id": "158835a4-6045-4c99-af76-4d17ce8c45a8",
       "question": "How do you define a function in JavaScript?",
       "answer": "function",
-      "tagId": "011c7d76-a9c8-43f4-b72e-1e907b9394d0",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f"
+      "columnId": "3666097f-516a-4b6b-8b92-c817fe2df55b",
+      "tagId": "011c7d76-a9c8-43f4-b72e-1e907b9394d0"
     },
     {
       "id": "626ae1a0-5256-441c-886c-220af5561c28",
@@ -32,29 +32,29 @@
       "id": "640ca789-f36b-4ebb-9fb9-f8986af36c72",
       "question": "What attribute is used to specify the image source in HTML?",
       "answer": "src",
-      "tagId": "c24d8b36-5de4-479c-a5c5-af9055f54621",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f"
+      "columnId": "5beb82e9-5caf-4860-b5d4-0baca30ab396",
+      "tagId": "c24d8b36-5de4-479c-a5c5-af9055f54621"
     },
     {
       "id": "fb043da4-82d3-4ea7-8e5a-ba76fad10402",
       "question": "How do you create a table in SQL?",
       "answer": "CREATE TABLE",
-      "tagId": "a0e8f319-547c-48e0-9e8e-d02e523d4599",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f"
+      "columnId": "5beb82e9-5caf-4860-b5d4-0baca30ab396",
+      "tagId": "a0e8f319-547c-48e0-9e8e-d02e523d4599"
     },
     {
       "id": "afa94b55-9f0f-42ae-a7d8-067857043e0c",
       "question": "Which tag defines a table row in HTML?",
       "answer": "tr",
-      "tagId": "c24d8b36-5de4-479c-a5c5-af9055f54621",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f"
+      "columnId": "f3161ba8-20ed-4292-b99c-35f3482fa481",
+      "tagId": "c24d8b36-5de4-479c-a5c5-af9055f54621"
     },
     {
       "id": "44282e97-e30c-4778-b6ad-e75b28fa815c",
       "question": "Which SQL statement is used to insert new records?",
       "answer": "INSERT",
-      "tagId": "a0e8f319-547c-48e0-9e8e-d02e523d4599",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f"
+      "columnId": "f3161ba8-20ed-4292-b99c-35f3482fa481",
+      "tagId": "a0e8f319-547c-48e0-9e8e-d02e523d4599"
     },
     {
       "id": "fb086ebc-d073-4521-b45a-dcab0b9a790d",
@@ -67,50 +67,50 @@
       "id": "2f640baf-a781-4cb2-a18e-fea542b2124e",
       "question": "What property sets the text color in CSS?",
       "answer": "color",
-      "tagId": "3c54efe2-9cbe-435c-a037-ea34cf73b0c5",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f"
+      "columnId": "3666097f-516a-4b6b-8b92-c817fe2df55b",
+      "tagId": "3c54efe2-9cbe-435c-a037-ea34cf73b0c5"
     },
     {
       "id": "e3bd1fcd-90b6-4db7-a496-6e5df3527a78",
       "question": "Which CSS property controls the space between elements?",
       "answer": "margin",
-      "tagId": "3c54efe2-9cbe-435c-a037-ea34cf73b0c5",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f"
+      "columnId": "f3161ba8-20ed-4292-b99c-35f3482fa481",
+      "tagId": "3c54efe2-9cbe-435c-a037-ea34cf73b0c5"
     },
     {
       "id": "24313e29-fb15-4e72-94d4-a24b7e9feaa3",
       "question": "What HTML tag is used for hyperlinks?",
       "answer": "a",
-      "tagId": "c24d8b36-5de4-479c-a5c5-af9055f54621",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f"
+      "columnId": "f3161ba8-20ed-4292-b99c-35f3482fa481",
+      "tagId": "c24d8b36-5de4-479c-a5c5-af9055f54621"
     },
     {
       "id": "095eef29-80f1-4c31-af59-96c35050b8e8",
       "question": "What method initializes a component in Angular?",
       "answer": "ngOnInit",
-      "tagId": "ac9b3cd5-ce0b-4386-8bd6-7f43505b3046",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f"
+      "columnId": "f3161ba8-20ed-4292-b99c-35f3482fa481",
+      "tagId": "ac9b3cd5-ce0b-4386-8bd6-7f43505b3046"
     },
     {
       "id": "1deac32d-cebc-4bf4-84ed-059b57fa988a",
       "question": "How do you handle HTTP requests in Node.js?",
       "answer": "http",
-      "tagId": "5deb23e2-5dbe-4c74-b657-37b7015d3be4",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f"
+      "columnId": "3666097f-516a-4b6b-8b92-c817fe2df55b",
+      "tagId": "5deb23e2-5dbe-4c74-b657-37b7015d3be4"
     },
     {
       "id": "b0b0cee9-3928-489b-a226-5d2579d9326c",
       "question": "What function is used to start a Node.js server?",
       "answer": "listen",
-      "tagId": "5deb23e2-5dbe-4c74-b657-37b7015d3be4",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f"
+      "columnId": "5beb82e9-5caf-4860-b5d4-0baca30ab396",
+      "tagId": "5deb23e2-5dbe-4c74-b657-37b7015d3be4"
     },
     {
       "id": "f224cbe1-a82c-4317-9bce-721b24dc041c",
       "question": "Which module is used for file operations in Node.js?",
       "answer": "fs",
-      "tagId": "5deb23e2-5dbe-4c74-b657-37b7015d3be4",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f"
+      "columnId": "5beb82e9-5caf-4860-b5d4-0baca30ab396",
+      "tagId": "5deb23e2-5dbe-4c74-b657-37b7015d3be4"
     },
     {
       "id": "c55ead81-11a0-4cb7-bd81-94645bda3234",
@@ -130,8 +130,8 @@
       "id": "c097f33e-78c5-46c8-895b-b5122870c334",
       "question": "What is the purpose of `@Input` in Angular?",
       "answer": "Property binding",
-      "tagId": "ac9b3cd5-ce0b-4386-8bd6-7f43505b3046",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f"
+      "columnId": "3666097f-516a-4b6b-8b92-c817fe2df55b",
+      "tagId": "ac9b3cd5-ce0b-4386-8bd6-7f43505b3046"
     },
     {
       "id": "172ca1c9-6917-4ca4-b2a7-e445b8bc1f20",

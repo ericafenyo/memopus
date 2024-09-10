@@ -1,7 +1,8 @@
-import {Component, Input, signal} from '@angular/core';
+import {Component, EventEmitter, Input, Output, signal} from '@angular/core';
 import {LucideAngularModule} from "lucide-angular";
 import {Flashcard} from "@app/interfaces/flashcard";
 import {ModalComponent} from "@app/components/ui/modal/modal.component";
+import {Column} from "@app/interfaces/column";
 
 @Component({
   selector: 'app-flashcard',
@@ -15,6 +16,17 @@ export class FlashcardComponent {
   flipped = false;
   isProposingAnswer = false;
   isEditingFlashcard = false;
+
+  @Output() onMoveLeft = new EventEmitter<Flashcard>()
+  @Output() onMoveRight = new EventEmitter<Flashcard>()
+
+  moveLeft(card: Flashcard) {
+    this.onMoveLeft.emit(card);
+  }
+
+  moveRight(card: Flashcard) {
+    this.onMoveRight.emit(card);
+  }
 
   onDismissModal(type: 'answer' | 'edit') {
     if (type === 'answer') {

@@ -6,7 +6,10 @@
 
     <div class="relative scroll-p-0.5">
         @for (card of cards; track card.id) {
-            <app-flashcard [card]="card"></app-flashcard>
+            <app-flashcard
+                    [card]="card"
+                    (onMoveLeft)="moveToLeft($event)"
+                    (onMoveRight)="moveToRight($event)"/>
         }
     </div>
 </div>

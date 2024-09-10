@@ -1,17 +1,24 @@
 <div class="border bg-white rounded m-2 py-2 px-3">
     <div class="flex items-center mb-3">
-        <button class="w-9 h-9 hover:bg-indigo-50 inline-flex items-center justify-center rounded-3xl border">
+        <button
+                class="w-9 h-9 hover:bg-indigo-50 inline-flex items-center justify-center rounded-3xl border disabled:pointer-events-none"
+                (click)="moveLeft(card)"
+                [disabled]="(card.column.order === 1)"
+        >
             <lucide-icon name="chevron-left"/>
         </button>
         <span class="flex-1 text-center">Move to column</span>
-        <button class="w-9 h-9 hover:bg-indigo-50 inline-flex items-center justify-center rounded-3xl border">
+        <button
+                class="w-9 h-9 hover:bg-indigo-50 inline-flex items-center justify-center rounded-3xl border disabled:pointer-events-none"
+                (click)="moveRight(card)"
+                [disabled]="card.column.order > 0 && card.column.order === 4"
+        >
             <lucide-icon name="chevron-right"/>
         </button>
     </div>
     <p class="leading-normal text-neutral-700 hover:cursor-pointer" (click)="flip()">{{ card.question }}</p>
 
     @if (flipped) {
-
         <div>
             <span class="divide-x"></span>
             <span class="text-neutral-500">Answer:</span>

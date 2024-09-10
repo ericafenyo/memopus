@@ -3,6 +3,8 @@ import {FlashcardComponent} from "@app/components/flashcard/flashcard.component"
 import {LucideAngularModule} from "lucide-angular";
 import {Column} from "@app/interfaces/column";
 import {Flashcard} from "@app/interfaces/flashcard";
+import {Position} from "@app/enums/position";
+import {Store} from "@app/services/store.service";
 
 @Component({
   selector: 'app-column',
@@ -13,5 +15,15 @@ import {Flashcard} from "@app/interfaces/flashcard";
 })
 export class ColumnComponent {
   @Input() column!: Column;
-  @Input() cards!: Flashcard[]
+  @Input() cards!: Flashcard[];
+
+  constructor(private store: Store) {}
+
+  moveToRight(card: Flashcard) {
+    this.store.actions.moveCard(card, Position.RIGHT);
+  }
+
+  moveToLeft(card: Flashcard) {
+    this.store.actions.moveCard(card, Position.LEFT);
+  }
 }
