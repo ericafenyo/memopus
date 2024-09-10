@@ -1,0 +1,22 @@
+<app-modal (dismiss)="onDismiss()" title="Create a tag">
+    <form (submit)="onSubmit($event)">
+        <div class="form-field">
+            <label for="label">Name</label>
+            <input
+                    class="text-input"
+                    id="label"
+                    name="label"
+                    placeholder="Enter the name of the tag"
+                    [formControl]="label"
+            />
+
+            @if (label.invalid && label.dirty) {
+                <span class="error-message block">The name field is required</span>
+            }
+        </div>
+
+        <div class="form-field">
+            <button class="button" type="submit">Create</button>
+        </div>
+    </form>
+</app-modal>

@@ -27,7 +27,13 @@
         </div>
     }
 
-    <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none mt-3 disabled:opacity-50 bg-slate-600 text-white shadow hover:bg-slate-600/90 h-9 px-4 py-2 w-full">
+    <button
+            (click)="proposeAnswer()"
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none mt-3 disabled:opacity-50 bg-slate-600 text-white shadow hover:bg-slate-600/90 h-9 px-4 py-2 w-full">
         Suggest an answer
     </button>
+
+    @if (isProposingAnswer) {
+        <app-propose-answer [card]="card" (dismiss)="handleDismissed('answer')"/>
+    }
 </div>

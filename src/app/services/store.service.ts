@@ -22,6 +22,7 @@ export class Store {
   constructor(private service: CardService) {
     this.service.getCards().subscribe(cards => this.#cards.next(cards));
     this.service.getColumns().subscribe(columns => this.#columns.next(columns));
+    this.service.getTags().subscribe(tags => this.#tags.next(tags));
   }
 
   private moveCard = (card: Flashcard, position: Position) => {
@@ -66,5 +67,11 @@ export class Store {
 
   actions = {
     moveCard: this.moveCard
+  }
+
+  filterBy(tag: Tag) {
+    this.service.getCards().pipe(
+      map(cards => cards.filter(card => card.tag.id === tag.id))
+    ).subscribe(cards => this.#cards.next(cards));
   }
 }

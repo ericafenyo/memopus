@@ -4,6 +4,7 @@ import {environment} from "@src/environments/environment";
 import {Flashcard} from "@app/interfaces/flashcard";
 import {Column} from "@app/interfaces/column";
 import {z} from "zod"
+import {Tag} from "@app/interfaces/tag";
 
 const schema = z.object({
   id: z.string().uuid(),
@@ -34,5 +35,9 @@ export class CardService {
 
   updateCard(options: UpdateFlashCardOptions) {
     return this.http.put<Flashcard>(`${environment.apiUrl}/cards/${options.id}`, options);
+  }
+
+  getTags() {
+    return this.http.get<Tag[]>(`${environment.apiUrl}/tags`);
   }
 }

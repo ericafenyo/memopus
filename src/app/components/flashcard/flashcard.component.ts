@@ -3,11 +3,12 @@ import {LucideAngularModule} from "lucide-angular";
 import {Flashcard} from "@app/interfaces/flashcard";
 import {ModalComponent} from "@app/components/ui/modal/modal.component";
 import {Column} from "@app/interfaces/column";
+import {ProposeAnswerComponent} from "@app/components/propose-answer/propose-answer.component";
 
 @Component({
   selector: 'app-flashcard',
   standalone: true,
-  imports: [LucideAngularModule, ModalComponent],
+  imports: [LucideAngularModule, ModalComponent, ProposeAnswerComponent],
   templateUrl: './flashcard.component.html',
   styleUrl: './flashcard.component.css'
 })
@@ -28,12 +29,20 @@ export class FlashcardComponent {
     this.onMoveRight.emit(card);
   }
 
-  onDismissModal(type: 'answer' | 'edit') {
+  handleDismissed(type: "answer" | "edit") {
     if (type === 'answer') {
       this.isProposingAnswer = false;
     } else if (type === 'edit') {
       this.isEditingFlashcard = false;
     }
+  }
+
+  proposeAnswer() {
+    this.isProposingAnswer = true;
+  }
+
+  editFlashcard() {
+    this.isEditingFlashcard = true;
   }
 
   flip() {

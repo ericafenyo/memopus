@@ -22,7 +22,7 @@ export class LoginComponent {
   ) {
   }
 
-  onSubmit(event: Event) {
+  onSubmit(event: SubmitEvent) {
     // Prevent the form from automatically submitting.
     // We will handle the submission ourselves.
     event.preventDefault()

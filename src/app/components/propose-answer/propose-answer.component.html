@@ -1,0 +1,45 @@
+<app-modal (dismiss)="handleDismiss()" title="Suggest an answer">
+    <form (submit)="onSubmit($event)" class="">
+        <div class="form-field">
+            <span>{{ card.question }}</span>
+        </div>
+        <div class="form-field">
+            <label for="answer">Answer</label>
+            <input
+                    class="text-input"
+                    id="answer"
+                    name="answer"
+                    placeholder="Enter your answer here"
+                    [formControl]="answer"
+            />
+
+            @if (answer.invalid && answer.dirty) {
+                <span class="error-message block">The Answer field is required</span>
+            }
+        </div>
+
+        @if (isComparing) {
+            <div>
+                <div>
+                    <span class="block">Expected response: {{ card.answer }}</span>
+                    <span class="block">Your response: {{ answer.value }}</span>
+                </div>
+            </div>
+        }
+
+        @if (isComparing) {
+            <div class="px-4 py-3 bg-green-100 border border-green-200  rounded-md">
+                <span class="block text-green-500">A perfect answer!</span>
+            </div>
+
+            <div class="form-field">
+                <button [disabled]="!isComparing" class="button" type="submit" (click)="handleDismiss()">Dismiss
+                </button>
+            </div>
+        } @else {
+            <div class="form-field">
+                <button [disabled]="isComparing" class="button" type="submit" (click)="compare()">Compare</button>
+            </div>
+        }
+    </form>
+</app-modal>

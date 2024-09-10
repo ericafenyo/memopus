@@ -1,0 +1,10 @@
+<div>
+    <div>
+        <app-icon-button icon="plus" (click)="addTag()"/>
+        <div>
+            @for (tag of tags; track tag.id) {
+                <app-chip [label]="tag.label" (click)="onClick(tag)"/>
+            }
+        </div>
+    </div>
+</div>

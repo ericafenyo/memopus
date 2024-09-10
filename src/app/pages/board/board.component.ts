@@ -5,11 +5,12 @@ import {CardService} from "@app/services/card.service";
 import {ColumnComponent} from "@app/components/column/column.component";
 import {Column} from "@app/interfaces/column";
 import {Store} from "@app/services/store.service";
+import {TagsComponent} from "@app/components/tags/tags.component";
 
 @Component({
   selector: 'app-board',
   standalone: true,
-  imports: [LucideAngularModule, ColumnComponent],
+  imports: [LucideAngularModule, ColumnComponent, TagsComponent],
 
   templateUrl: './board.component.html',
   styleUrl: './board.component.css'

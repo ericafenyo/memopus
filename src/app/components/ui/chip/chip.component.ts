@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-chip',
@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './chip.component.css'
 })
 export class ChipComponent {
-
+  @Input() label!: string;
 }
