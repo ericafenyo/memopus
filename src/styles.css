@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,7 +10,7 @@
   }
 
   .text-input {
-    @apply bg-white border rounded-sm;
+    @apply inline-flex px-3 py-2 bg-white border transition-colors rounded-sm h-10 focus:ring-2 focus:ring-slate-700 focus:outline-none;
   }
 
   .form-field {
@@ -18,5 +19,17 @@
 
   .error-message {
     @apply text-red-500 text-sm;
+  }
+
+  .button {
+    @apply inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-green-800 disabled:pointer-events-none mt-3 disabled:opacity-50 bg-green-800 text-white shadow hover:bg-green-800/90 h-10 px-4 py-2 w-full
+  }
+
+  .button-outline {
+    @apply border border-slate-300
+  }
+
+  .button-ghost {
+    @apply bg-transparent hover:bg-slate-200
   }
 }

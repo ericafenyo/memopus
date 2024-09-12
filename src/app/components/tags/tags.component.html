@@ -1,10 +1,19 @@
 <div>
-    <div>
-        <app-icon-button icon="plus" (click)="addTag()"/>
-        <div>
-            @for (tag of tags; track tag.id) {
-                <app-chip [label]="tag.label" (click)="onClick(tag)"/>
-            }
-        </div>
+  <div>
+    <div class="flex justify-center flex-wrap gap-2">
+      @for (tag of tags; track tag.id) {
+      <app-chip [tag]="tag" (click)="onClick(tag)" />
+      }
+      <app-icon-button
+        classes="h-8 w-8 bg-green-800 text-white rounded-md shadow-sm hover:bg-green-800/90"
+        icon="plus"
+        (click)="handleClick()"
+      />
     </div>
+  </div>
+
+  @if (isCreateTag) {
+  <app-create-tag (dismiss)="onDismiss()" />
+  <div>This is always visible</div>
+  }
 </div>

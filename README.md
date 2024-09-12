@@ -1,48 +1,108 @@
 # Memopus
 
+Memopus is a web application that helps users memorize information by creating and managing flashcards.
+
 ## Features:
 
 1. **User Authentication:**  
-   Users can log in with their username and password to access the app's features, ensuring secure management of their cards.
+   Users can log in with their username and password to access the app's features, ensuring secure management of their
+   cards.
 
 2. **Card Management:**  
-   Users can create, view, edit, and delete cards. Each card consists of a question and an answer, providing a flexible way to store information.
+   Users can create, view, edit, and delete cards. Each card consists of a question, an answer and a description,
+   providing a flexible way to memorize information.
 
-3. **Tag-based Organization:**  
-   Cards are categorized by tags and columns, allowing users to easily organize and filter their cards based on specific categories.
+3. **Columns-based Organization:**  
+   Cards are categorized by columns, allowing users to easily move cards between different columns with a simple click,
+   helping them keep track of progress or status.
 
 4. **Filter by Tag:**  
-   Users can filter cards by selecting a tag, which displays only the relevant cards associated with that tag.
+   Users can filter cards by selecting a tag, which displays only the relevant cards associated with that tag or
+   category.
 
-5. **Reveal Answer on Click:**  
+5. **Sneak peek of the Answer:**  
    When viewing a card, the user can click on the question to reveal the answer, enabling a quick review of the content.
 
-6. **Move Cards Between Columns:**  
-   Users can reorganize their cards by moving them between different columns with a simple click, helping them keep track of progress or status.
+6. **Propose an Answer:**  
+   Users can propose answers to card questions. The app compares the proposed answer with the stored answer, providing
+   instant feedback based on the comparison.
 
-7. **Propose an Answer:**  
-   Users can propose answers to card questions. The app compares the proposed answer with the stored answer, providing instant feedback based on the comparison.
+## Installation
 
-## Development server
+### Prerequisite
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Make sure you have the following installed:
 
-## Code scaffolding
+- Node.js (v18 or higher)
+- Angular CLI (The version used in this project is 18.2)
+- npm
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Download and navigate to the project directory in your terminal:
 
-## Build
+```sh
+cd memopus
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Install dependencies:
 
-## Running unit tests
+```sh
+npm install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 2. Start the JSON Server
 
-## Running end-to-end tests
+To start the json-server (in watch mode):
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```sh
+npm run start:server
+```
+
+## 3. Start the Angular Application
+
+```sh
+npm start
+```
+
+Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+## Technical documentation
+
+### Profile structure
+
+```
+├── assets
+├── public
+└── src
+    ├── app
+    │   ├── components
+    │   │   └── ui
+    │   ├── core
+    │   │   ├── guards
+    │   │   ├── services
+    │   │   └── enums
+    │   ├── models
+    │   ├── pages
+    └── environments
+```
+
+## UI and Theming
+
+Components are custom-made and styled using Tailwind utility classes.
+
+## App state management
+
+As someone who comes from a React background, I am more familiar with Redux for state management. So, I duplicated it
+using ReactiveX BehaviorSubject subject and created a `Store`.
+BehaviorSubject is a type of Subject,that stores the latest value emitted to its consumers, and whenever a new Observer
+subscribes, it will immediately receive the “current” value from the BehaviorSubject. so it a way it search as a cache.
+
+This `Store` serve as a single source of truth for the application state, and it is injected into the ui components.
+The values exposed by the `Store` are Observables, which means the components to subscribe to changes will be notified
+whenever the state changes.
+
+ui-components -> Store -> Service -> JSON Server (API)
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+To get more help on the Angular CLI use `ng help` or go check out
+the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

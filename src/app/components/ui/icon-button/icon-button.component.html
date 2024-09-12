@@ -1,3 +1,9 @@
-<button (click)="handleClick()">
-    <lucide-icon [name]="icon"/>
+<button
+  type="button"
+  class="flex items-center justify-center rounded-3xl {{
+    disabled ? 'opacity-30' : 'opacity-100'
+  }} {{ classes }}"
+  [disabled]="disabled"
+>
+  <lucide-icon class="h-5 w-5" [name]="icon" />
 </button>

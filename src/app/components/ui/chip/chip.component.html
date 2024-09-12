@@ -1,1 +1,10 @@
-<button>{{ label }}</button>
+<button
+  type="button"
+  class="inline-flex items-center justify-center h-8 px-3 text-sm border border-slate-200 rounded-md shadow-sm transition-colors text-slate-900 {{
+    active
+      ? 'bg-green-800 text-white hover:bg-green-800/90'
+      : 'hover:bg-slate-100'
+  }}"
+>
+  {{ tag.label }}
+</button>

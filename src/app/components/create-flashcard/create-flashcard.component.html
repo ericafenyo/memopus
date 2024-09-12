@@ -1,49 +1,72 @@
-<app-modal (dismiss)="onDismiss()" title="Create a flashcard">
-    <form (submit)="onSubmit($event)">
-        <div class="form-field">
-            <label for="question">Question</label>
-            <input
-                    class="text-input"
-                    id="question"
-                    name="question"
-                    placeholder="Enter the question"
-                    [formControl]="question"
-            />
+<app-modal (dismiss)="dismiss.emit()" title="Create a flashcard">
+  <form (submit)="onSubmit($event)">
+    <div class="form-field">
+      <label for="question">Question</label>
+      <input
+        class="text-input"
+        id="question"
+        name="question"
+        placeholder="Enter the question"
+        [formControl]="question"
+      />
 
-            @if (question.invalid && question.dirty) {
-                <span class="error-message block">The name field is required</span>
-            }
-        </div>
-        <div class="form-field">
-            <label for="answer">Answer</label>
-            <input
-                    class="text-input"
-                    id="answer"
-                    name="answer"
-                    placeholder="Enter the answer"
-                    [formControl]="answer"
-            />
+      @if (question.invalid && question.dirty) {
+      <span class="error-message block">The name field is required</span>
+      }
+    </div>
+    <div class="form-field">
+      <label for="answer">Answer</label>
+      <input
+        class="text-input"
+        id="answer"
+        name="answer"
+        placeholder="Enter the answer"
+        [formControl]="answer"
+      />
 
-            @if (answer.invalid && answer.dirty) {
-                <span class="error-message block">The answer field is required</span>
-            }
-        </div>
-        <div class="form-field">
-            <label for="description">Description</label>
-            <textarea
-                    class="text-input"
-                    id="description"
-                    name="description"
-                    placeholder="Enter the name of the tag"
-                    [formControl]="description"></textarea>
+      @if (answer.invalid && answer.dirty) {
+      <span class="error-message block">The answer field is required</span>
+      }
+    </div>
+    <div class="form-field">
+      <label for="description">Description</label>
+      <textarea
+        class="text-input"
+        id="description"
+        name="description"
+        placeholder="Enter the name of the tag"
+        [formControl]="description"
+      ></textarea>
 
-            @if (description.invalid && description.dirty) {
-                <span class="error-message block">The description field is required</span>
-            }
-        </div>
+      @if (description.invalid && description.dirty) {
+      <span class="error-message block">The description field is required</span>
+      }
+    </div>
 
-        <div class="form-field">
-            <button class="button" type="submit">Create</button>
-        </div>
-    </form>
+    <div class="form-field">
+      <label for="column">Column</label>
+      <input
+        class="text-input"
+        id="column"
+        name="column"
+        disabled
+        [value]="column.label"
+      />
+    </div>
+
+    <div class="form-field">
+      <label for="tag">Tag</label>
+      <input
+        class="text-input"
+        id="tag"
+        name="tag"
+        disabled
+        [value]="tag.label"
+      />
+    </div>
+
+    <div class="form-field">
+      <button class="button" type="submit">Create</button>
+    </div>
+  </form>
 </app-modal>

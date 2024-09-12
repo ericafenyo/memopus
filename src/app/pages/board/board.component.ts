@@ -1,11 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 import {LucideAngularModule} from "lucide-angular";
-import {Flashcard} from "@app/interfaces/flashcard";
-import {CardService} from "@app/services/card.service";
+import {Flashcard} from "@app/models/flashcard";
+import {CardService} from "@app/core/services/card.service";
 import {ColumnComponent} from "@app/components/column/column.component";
-import {Column} from "@app/interfaces/column";
-import {Store} from "@app/services/store.service";
+import {Column} from "@app/models/column";
+import {Store} from "@app/core/services/store.service";
 import {TagsComponent} from "@app/components/tags/tags.component";
+import {Tag} from "@app/models/tag";
 
 @Component({
   selector: 'app-board',
@@ -16,20 +17,24 @@ import {TagsComponent} from "@app/components/tags/tags.component";
   styleUrl: './board.component.css'
 })
 export class BoardComponent implements OnInit {
-  columns!: Column[];
+  // We will store cards that are filtered by tag here.
+  // When no tag is selected, cards will be equal to #cards.
   cards!: Flashcard[];
+  columns!: Column[];
+  tag!: Tag;
 
   constructor(
-    private cardStore: Store,
-    private service: CardService
+    private store: Store,
   ) {}
 
   ngOnInit() {
-    // this.service.getCards().subscribe(cards => {this.cards = cards});
-
-    this.cardStore.cards.subscribe(cards => {this.cards = cards});
-
-    this.service.getColumns().subscribe(columns => {this.columns = columns});
+    this.store.cards.subscribe(cards => {this.cards = cards});
+    this.store.columns.subscribe(columns => {this.columns = columns});
+    this.store.activeTag.subscribe(tag => {
+      if (tag) {
+        this.tag = tag;
+      }
+    });
   }
 
   findCardsBy(column: Column) {

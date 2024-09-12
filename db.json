@@ -8,9 +8,9 @@
   ],
   "sessions": [
     {
-      "id": "e2739a82-2497-4af7-b51a-424ea3fc8076",
+      "id": "47d60bfb-8954-43c9-99a2-1e1283b3fd65",
       "subject": "6f944e72-7dd9-4b8a-a3ce-4959497b6f3c",
-      "created": "2024-09-09T12:18:00.628Z"
+      "created": "2024-09-12T00:04:16.186Z"
     }
   ],
   "cards": [
@@ -18,48 +18,55 @@
       "id": "158835a4-6045-4c99-af76-4d17ce8c45a8",
       "question": "How do you define a function in JavaScript?",
       "answer": "function",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f",
+      "description": "A function is a block of code that performs a specific task",
+      "columnId": "3666097f-516a-4b6b-8b92-c817fe2df55b",
       "tagId": "011c7d76-a9c8-43f4-b72e-1e907b9394d0"
     },
     {
       "id": "626ae1a0-5256-441c-886c-220af5561c28",
       "question": "What SQL keyword is used to retrieve data?",
       "answer": "SELECT",
-      "tagId": "a0e8f319-547c-48e0-9e8e-d02e523d4599",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f"
+      "description": "The SELECT keyword is used to retrieve data from a database",
+      "columnId": "3666097f-516a-4b6b-8b92-c817fe2df55b",
+      "tagId": "a0e8f319-547c-48e0-9e8e-d02e523d4599"
     },
     {
       "id": "640ca789-f36b-4ebb-9fb9-f8986af36c72",
       "question": "What attribute is used to specify the image source in HTML?",
       "answer": "src",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f",
-      "tagId": "c24d8b36-5de4-479c-a5c5-af9055f54621"
+      "description": "The src attribute specifies the URL of the image",
+      "tagId": "c24d8b36-5de4-479c-a5c5-af9055f54621",
+      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f"
     },
     {
       "id": "fb043da4-82d3-4ea7-8e5a-ba76fad10402",
       "question": "How do you create a table in SQL?",
       "answer": "CREATE TABLE",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f",
+      "description": "The CREATE TABLE statement is used to create a new table in a database",
+      "columnId": "3666097f-516a-4b6b-8b92-c817fe2df55b",
       "tagId": "a0e8f319-547c-48e0-9e8e-d02e523d4599"
     },
     {
       "id": "afa94b55-9f0f-42ae-a7d8-067857043e0c",
       "question": "Which tag defines a table row in HTML?",
       "answer": "tr",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f",
-      "tagId": "c24d8b36-5de4-479c-a5c5-af9055f54621"
+      "description": "The tr tag defines a table row in HTML",
+      "tagId": "c24d8b36-5de4-479c-a5c5-af9055f54621",
+      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f"
     },
     {
       "id": "44282e97-e30c-4778-b6ad-e75b28fa815c",
       "question": "Which SQL statement is used to insert new records?",
       "answer": "INSERT",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f",
+      "description": "The INSERT INTO statement is used to insert new records into a table",
+      "columnId": "3666097f-516a-4b6b-8b92-c817fe2df55b",
       "tagId": "a0e8f319-547c-48e0-9e8e-d02e523d4599"
     },
     {
       "id": "fb086ebc-d073-4521-b45a-dcab0b9a790d",
       "question": "What directive is used to repeat elements in Angular?",
       "answer": "*ngFor",
+      "description": "The *ngFor directive is used to repeat elements in Angular",
       "tagId": "ac9b3cd5-ce0b-4386-8bd6-7f43505b3046",
       "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f"
     },
@@ -67,62 +74,71 @@
       "id": "2f640baf-a781-4cb2-a18e-fea542b2124e",
       "question": "What property sets the text color in CSS?",
       "answer": "color",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f",
+      "description": "The color property is used to set the text color in CSS",
+      "columnId": "f3161ba8-20ed-4292-b99c-35f3482fa481",
       "tagId": "3c54efe2-9cbe-435c-a037-ea34cf73b0c5"
     },
     {
       "id": "e3bd1fcd-90b6-4db7-a496-6e5df3527a78",
       "question": "Which CSS property controls the space between elements?",
       "answer": "margin",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f",
-      "tagId": "3c54efe2-9cbe-435c-a037-ea34cf73b0c5"
+      "description": "The margin property controls the space between elements in CSS",
+      "tagId": "3c54efe2-9cbe-435c-a037-ea34cf73b0c5",
+      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f"
     },
     {
       "id": "24313e29-fb15-4e72-94d4-a24b7e9feaa3",
       "question": "What HTML tag is used for hyperlinks?",
       "answer": "a",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f",
-      "tagId": "c24d8b36-5de4-479c-a5c5-af9055f54621"
+      "description": "The a tag is used to create hyperlinks in HTML",
+      "tagId": "c24d8b36-5de4-479c-a5c5-af9055f54621",
+      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f"
     },
     {
       "id": "095eef29-80f1-4c31-af59-96c35050b8e8",
       "question": "What method initializes a component in Angular?",
       "answer": "ngOnInit",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f",
+      "description": "The ngOnInit method is used to initialize a component in Angular",
+      "columnId": "3666097f-516a-4b6b-8b92-c817fe2df55b",
       "tagId": "ac9b3cd5-ce0b-4386-8bd6-7f43505b3046"
     },
     {
       "id": "1deac32d-cebc-4bf4-84ed-059b57fa988a",
       "question": "How do you handle HTTP requests in Node.js?",
       "answer": "http",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f",
-      "tagId": "5deb23e2-5dbe-4c74-b657-37b7015d3be4"
+      "description": "The http module is used to handle HTTP requests in Node.js",
+      "tagId": "5deb23e2-5dbe-4c74-b657-37b7015d3be4",
+      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f"
     },
     {
       "id": "b0b0cee9-3928-489b-a226-5d2579d9326c",
       "question": "What function is used to start a Node.js server?",
       "answer": "listen",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f",
-      "tagId": "5deb23e2-5dbe-4c74-b657-37b7015d3be4"
+      "description": "The listen function is used to start a Node.js server",
+      "tagId": "5deb23e2-5dbe-4c74-b657-37b7015d3be4",
+      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f"
     },
     {
       "id": "f224cbe1-a82c-4317-9bce-721b24dc041c",
       "question": "Which module is used for file operations in Node.js?",
       "answer": "fs",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f",
-      "tagId": "5deb23e2-5dbe-4c74-b657-37b7015d3be4"
+      "description": "The fs module is used for file operations in Node.js",
+      "tagId": "5deb23e2-5dbe-4c74-b657-37b7015d3be4",
+      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f"
     },
     {
       "id": "c55ead81-11a0-4cb7-bd81-94645bda3234",
       "question": "What keyword is used to modify existing data in SQL?",
       "answer": "UPDATE",
-      "tagId": "a0e8f319-547c-48e0-9e8e-d02e523d4599",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f"
+      "description": "The UPDATE keyword is used to modify existing data in a table",
+      "columnId": "5beb82e9-5caf-4860-b5d4-0baca30ab396",
+      "tagId": "a0e8f319-547c-48e0-9e8e-d02e523d4599"
     },
     {
       "id": "7d1347e2-15f0-43e7-8ab1-b8f891513d82",
       "question": "Which HTML tag is used for an unordered list?",
       "answer": "ul",
+      "description": "The ul tag is used to create an unordered list in HTML",
       "tagId": "c24d8b36-5de4-479c-a5c5-af9055f54621",
       "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f"
     },
@@ -130,20 +146,23 @@
       "id": "c097f33e-78c5-46c8-895b-b5122870c334",
       "question": "What is the purpose of `@Input` in Angular?",
       "answer": "Property binding",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f",
-      "tagId": "ac9b3cd5-ce0b-4386-8bd6-7f43505b3046"
+      "description": "The @Input decorator is used for property binding in Angular",
+      "tagId": "ac9b3cd5-ce0b-4386-8bd6-7f43505b3046",
+      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f"
     },
     {
       "id": "172ca1c9-6917-4ca4-b2a7-e445b8bc1f20",
       "question": "What property is used to change the font size in CSS?",
       "answer": "font-size",
-      "tagId": "3c54efe2-9cbe-435c-a037-ea34cf73b0c5",
-      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f"
+      "description": "The font-size property is used to change the font size in CSS",
+      "columnId": "5beb82e9-5caf-4860-b5d4-0baca30ab396",
+      "tagId": "3c54efe2-9cbe-435c-a037-ea34cf73b0c5"
     },
     {
       "id": "5d432590-58dc-47c3-9883-3621523a74cd",
       "question": "How do you declare a variable in JavaScript?",
       "answer": "let",
+      "description": "The let keyword is used to declare a variable in JavaScript",
       "columnId": "5beb82e9-5caf-4860-b5d4-0baca30ab396",
       "tagId": "011c7d76-a9c8-43f4-b72e-1e907b9394d0"
     },
@@ -151,6 +170,7 @@
       "id": "d16880a2-12d9-4761-9042-a9eb4f411f73",
       "question": "Which CSS property is used to set the background color?",
       "answer": "background-color",
+      "description": "The background-color property is used to set the background color in CSS",
       "tagId": "3c54efe2-9cbe-435c-a037-ea34cf73b0c5",
       "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f"
     },
@@ -158,8 +178,9 @@
       "id": "ba1b6fd8-933e-4f58-9ec7-7cc725d92cb0",
       "question": "What does `===` do in JavaScript?",
       "answer": "Strict equality",
-      "columnId": "3666097f-516a-4b6b-8b92-c817fe2df55b",
-      "tagId": "011c7d76-a9c8-43f4-b72e-1e907b9394d0"
+      "description": "The `===` operator checks for strict equality in JavaScript. It returns true if the operands are equal and of the same type",
+      "tagId": "011c7d76-a9c8-43f4-b72e-1e907b9394d0",
+      "columnId": "6a3fb0cf-e297-4c7c-b19b-ea04792fb44f"
     }
   ],
   "columns": [

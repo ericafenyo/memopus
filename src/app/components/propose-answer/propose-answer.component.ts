@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {ModalComponent} from "@app/components/ui/modal/modal.component";
 import {FormControl, ReactiveFormsModule, Validators} from "@angular/forms";
-import {Flashcard} from "@app/interfaces/flashcard";
+import {Flashcard} from "@app/models/flashcard";
 
 @Component({
   selector: 'app-propose-answer',
@@ -15,19 +15,14 @@ export class ProposeAnswerComponent {
   @Input() card!: Flashcard;
   @Output() dismiss = new EventEmitter();
 
-  isComparing: boolean = false;
-  answer = new FormControl<string>("answer", [Validators.required]);
+  submitting: boolean = false;
+  isCorrect: boolean = false;
 
-  handleDismiss() {
-    this.dismiss.emit();
-  }
-
-  compare() {
-    this.isComparing = true;
-  }
-
+  answer = new FormControl<string>("", [Validators.required]);
 
   onSubmit(event: SubmitEvent) {
     event.preventDefault()
+    this.submitting = true;
+    this.isCorrect = this.answer.value === this.card.answer;
   }
 }

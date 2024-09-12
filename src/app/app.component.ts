@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {RouterOutlet} from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {Router, RouterOutlet} from '@angular/router';
 import {ModalComponent} from "@app/components/ui/modal/modal.component";
 
 @Component({
@@ -9,6 +9,14 @@ import {ModalComponent} from "@app/components/ui/modal/modal.component";
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'memopus';
+
+  constructor(private router: Router) {}
+
+
+  async ngOnInit() {
+    //Route to the board page
+    await this.router.navigate(['/board']);
+  }
 }

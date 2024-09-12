@@ -11,7 +11,7 @@
                             </h3>
                         </div>
                         <div>
-                            <button (click)="onDismissed($event)">
+                            <button (click)="dismiss.emit($event)" type="button">
                                 <lucide-icon name="x"/>
                             </button>
                         </div>
@@ -22,3 +22,4 @@
         </div>
     </div>
 </div>
+

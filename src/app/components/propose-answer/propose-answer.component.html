@@ -1,45 +1,59 @@
-<app-modal (dismiss)="handleDismiss()" title="Suggest an answer">
-    <form (submit)="onSubmit($event)" class="">
-        <div class="form-field">
-            <span>{{ card.question }}</span>
-        </div>
-        <div class="form-field">
-            <label for="answer">Answer</label>
-            <input
-                    class="text-input"
-                    id="answer"
-                    name="answer"
-                    placeholder="Enter your answer here"
-                    [formControl]="answer"
-            />
+<app-modal (dismiss)="dismiss.emit()" title="Suggest an answer">
+  <form (submit)="onSubmit($event)" class="">
+    <div class="form-field">
+      <span>{{ card.question }}</span>
+    </div>
+    <div class="form-field my-4">
+      <label for="answer">Answer</label>
+      <input
+        class="text-input"
+        id="answer"
+        name="answer"
+        placeholder="Enter your answer here"
+        [formControl]="answer"
+      />
 
-            @if (answer.invalid && answer.dirty) {
-                <span class="error-message block">The Answer field is required</span>
-            }
-        </div>
+      @if (answer.invalid && answer.dirty) {
+      <span class="error-message block">The Answer field is required</span>
+      }
+    </div>
 
-        @if (isComparing) {
-            <div>
-                <div>
-                    <span class="block">Expected response: {{ card.answer }}</span>
-                    <span class="block">Your response: {{ answer.value }}</span>
-                </div>
-            </div>
-        }
+    @if (submitting) { @if (isCorrect) {
+    <div
+      class="px-4 py-3 bg-green-50 text-green-800 border border-green-300 rounded-md"
+    >
+      <span class="block font-medium">A perfect answer!</span>
+    </div>
+    } @else {
+    <div>
+      <div>
+        <div class="border-b border-dashed border-slate-400 my-3"></div>
+        <span class="block bg-green-200 font-medium text-green-800"
+          >Expected response: {{ card.answer }}</span
+        >
+        <span class="block bg-red-200 font-medium text-red-800"
+          >Your response: {{ answer.value }}</span
+        >
+      </div>
+    </div>
+    }
 
-        @if (isComparing) {
-            <div class="px-4 py-3 bg-green-100 border border-green-200  rounded-md">
-                <span class="block text-green-500">A perfect answer!</span>
-            </div>
-
-            <div class="form-field">
-                <button [disabled]="!isComparing" class="button" type="submit" (click)="handleDismiss()">Dismiss
-                </button>
-            </div>
-        } @else {
-            <div class="form-field">
-                <button [disabled]="isComparing" class="button" type="submit" (click)="compare()">Compare</button>
-            </div>
-        }
-    </form>
+    <div class="form-field">
+      <button
+        [disabled]="!submitting"
+        class="button bg-slate-700 hover:bg-slate-700/90"
+        type="button"
+        (click)="dismiss.emit()"
+      >
+        Dismiss
+      </button>
+    </div>
+    } @else {
+    <div class="form-field">
+      <button [disabled]="submitting" class="button" type="submit">
+        Compare
+      </button>
+    </div>
+    }
+  </form>
 </app-modal>

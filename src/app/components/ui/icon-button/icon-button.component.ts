@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {LucideAngularModule} from "lucide-angular";
 
 @Component({
@@ -12,9 +12,6 @@ import {LucideAngularModule} from "lucide-angular";
 })
 export class IconButtonComponent {
   @Input() icon!: string;
-  @Output() click = new EventEmitter();
-
-  handleClick() {
-    this.click.emit();
-  }
+  @Input() classes: string = "";
+  @Input() disabled!: boolean;
 }

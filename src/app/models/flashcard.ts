@@ -1,5 +1,5 @@
-import {Tag} from "@app/interfaces/tag";
-import {Column} from "@app/interfaces/column";
+import {Tag} from "@app/models/tag";
+import {Column} from "@app/models/column";
 
 /**
  * Represents a card with a question and a hidden answer used for study.

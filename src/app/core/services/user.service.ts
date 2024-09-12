@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {environment} from "@src/environments/environment"
 import {Observable} from "rxjs";
-import {Flashcard} from "@app/interfaces/flashcard";
+import {Flashcard} from "@app/models/flashcard";
 
 @Injectable({
   providedIn: 'root'
