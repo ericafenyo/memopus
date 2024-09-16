@@ -2,6 +2,8 @@
 
 Memopus is a web application that helps users memorize information by creating and managing flashcards.
 
+![](./assets/Screenshot%202024-09-12%20at%2000.20.43.png)
+
 ## Features:
 
 1. **User Authentication:**  
